@@ -1,26 +1,70 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <MyNav></MyNav>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import Navbar from "@/components/Navbar";
+import MyNav from "@/components/Navbar";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {MyNav}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+@font-face {
+  font-family: 'Sabon-bold';
+  src: url("../public/fonts/Sabon/SabonCyr-Bold.woff") format('woff');
 }
+@font-face {
+  font-family: 'Sabon-light';
+  src: url("../public/fonts/Sabon/SabonCyr-Roman.woff") format('woff');
+}
+@font-face {
+  font-family: 'Trade-bold';
+  src: url("../public/fonts/TradeGothic/TradeGothicLT-Bold.woff") format('woff');
+}
+@font-face {
+  font-family: 'Trade-light';
+  src: url("../public/fonts/TradeGothic/TradeGothicLT-Light.woff") format('woff');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  /*padding: 20px;*/
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bold-sabon{
+  font-family: Sabon-bold, serif;
+}
+
+.bold-trade {
+  font-family: Trade-bold, serif;
+}
+
+.light-sabon {
+  font-family: Sabon-light, serif;
+}
+
+.light-trade {
+  font-family: Trade-light, serif;
+}
+@font-face {
+  font-family: 'IBM-medium';
+  src: url("../public/fonts/IBMPlex/IBMPlexSans-Medium.ttf") format('truetype');
+}
+
+/**{*/
+/*  font-family: IBM-medium, serif;*/
+/*}*/
 </style>
